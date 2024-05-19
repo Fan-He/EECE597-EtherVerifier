@@ -1,8 +1,12 @@
 <template>
-    <div>
-        <h1>Account Page</h1>
-        <div>
-            
+    <div class="account-view">
+        <div class="photo">
+            <img :src="user.photo" alt="User Photo" />
+        </div>
+        <div class="info">
+            <h2>{{ user.name }}</h2>
+            <p>{{ user.address }}</p>
+            <p>Balance: {{ user.balance }}</p>
         </div>
     </div>
 </template>
@@ -11,20 +15,41 @@
 export default {
     data() {
         return {
-            username: '',
-            email: '',
-            password: ''
+            user: {
+                photo: "path/to/user/photo.jpg",
+                name: "John Doe",
+                address: "123 Main St, Anytown, USA",
+                balance: "$1000"
+            }
         };
-    },
-    methods: {
-        saveAccount() {
-            // TODO: Implement saving account logic
-            console.log('Saving account...');
-        }
     }
 };
 </script>
 
 <style scoped>
-/* Add your custom styles here */
+.account-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .photo img {
+        width: 150px;
+        height: 150px;
+    }
+}
 </style>
