@@ -1,30 +1,23 @@
+<script setup>
+import { ref } from "vue";
+const active = ref(0);
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="whole">
+      <nav class="header">Ether Verifier</nav>
+      <main>
+        <router-view></router-view>
+      </main>
+      <van-tabbar v-model="active" active-color="#A3D1DD" route="true">
+        <van-tabbar-item to="/account" icon="user">My Account</van-tabbar-item>
+        <van-tabbar-item to="/" icon="wap-home">HomePage</van-tabbar-item>
+        <van-tabbar-item to="/board" icon="notes">Board</van-tabbar-item>
+      </van-tabbar>
+  </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style lang="less" scoped>
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
