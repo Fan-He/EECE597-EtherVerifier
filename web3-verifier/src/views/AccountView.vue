@@ -1,8 +1,8 @@
 <template>
     <div class="account-view">
-        <div class="photo">
-            <img :src="user.photo" alt="User Photo" />
-        </div>
+        <!-- <div class="photo">
+            <img :src="require('@/views/user.png')" alt="User Photo" >
+        </div> -->
         <div class="info">
             <h2>{{ user.name }}</h2>
             <p>{{ user.address }}</p>
@@ -16,9 +16,9 @@ export default {
     data() {
         return {
             user: {
-                photo: "path/to/user/photo.jpg",
-                name: "John Doe",
-                address: "123 Main St, Anytown, USA",
+                photo: "require('@/views/user.png')",
+                name: "Test User",
+                address: "123 Main St, Anytown, Canada",
                 balance: "$1000"
             }
         };
