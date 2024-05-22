@@ -1,7 +1,7 @@
 <template>
-    <div class="register">
+    <div class="register-container">
         <h1>Register</h1>
-        <form @submit="handleSubmit">
+        <form @submit.prevent="registerUser">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" v-model="username" required>
@@ -29,24 +29,21 @@ export default {
         };
     },
     methods: {
-        handleSubmit(event) {
-            event.preventDefault();
-            // Perform registration logic here
-            console.log('Registering user:', this.username);
-            // Reset form fields
-            this.username = '';
-            this.email = '';
-            this.password = '';
+        registerUser() {
+            // Add your registration logic here
+            // You can use this.username, this.email, and this.password to access the form values
         }
     }
 };
 </script>
 
 <style scoped>
-.register {
-    max-width: 400px;
-    margin: 0 auto;
+.register-container {
+    max-width: 80%;
+    margin: 10px auto;
     padding: 20px;
+    border-radius: 5px;
+    
 }
 
 .form-group {
@@ -58,20 +55,19 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+input {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
 button {
     padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
+    background-color: #A3D1DD;
     color: #fff;
     border: none;
+    border-radius: 3px;
     cursor: pointer;
 }
 </style>

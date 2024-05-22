@@ -34,10 +34,9 @@ export default {
 
 <style scoped>
 .login-container {
-    max-width: 400px;
+    max-width: 80%;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
@@ -60,7 +59,7 @@ input[type="password"] {
 
 button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #A3D1DD;
     color: #fff;
     border: none;
     border-radius: 3px;

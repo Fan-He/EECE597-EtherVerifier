@@ -3,7 +3,7 @@
         <table class="board-table">
             <thead>
                 <tr>
-                    <th class="wide-column">Ethereum Wallet Address</th>
+                    <th class="wide-column">Address</th>
                     <th class="thin-column">Status</th>
                 </tr>
             </thead>
